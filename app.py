@@ -20,7 +20,7 @@ MAIN_KEY = base64.b64decode('WWcmdGMlREV1aDYlWmNeOA==')
 MAIN_IV = base64.b64decode('Nm95WkRyMjJFM3ljaGpNJQ==')
 RELEASEVERSION = "OB52"
 USERAGENT = "Dalvik/2.1.0 (Linux; U; Android 13; CPH2095 Build/RKQ1.211119.001)"
-SUPPORTED_REGIONS = {"IND", "BR", "US", "SAC", "NA", "SG", "RU", "ID", "TW", "VN", "TH", "ME", "PK", "CIS", "BD", "EUROPE"}
+SUPPORTED_REGIONS = {"IND", "BD", "BR", "US", "SAC", "NA", "SG", "RU", "ID", "TW", "VN", "TH", "ME", "PK", "CIS", "BD", "EUROPE"}
 
 # --- SECURITY KEY ---
 API_KEY_REQUIRED = "Flash" 
@@ -56,10 +56,12 @@ def get_account_credentials(region: str) -> str:
     r = region.upper()
     if r == "IND":
         return "uid=4612964480&password=FLASH_TR_3HP6EGVUJ"
+    elif r == "BD":
+        return "uid=4612988977&password=FLASH_TR_TCQZ6EVSZ"  # BD credentials
     elif r in {"BR", "US", "SAC", "NA"}:
         return "uid=4612968156&password=FLASH_TR_MZRVWF07I"
     else:
-        return "uid=4612988977&password=FLASH_TR_TCQZ6EVSZ"
+        return "uid=3158350464&password=70EA041FCF79190E3D0A8F3CA95CAAE1F39782696CE9D85C2CCD525E28D223FC"
 
 # === Token Generation ===
 
@@ -187,4 +189,4 @@ async def startup():
 
 if __name__ == '__main__':
     asyncio.run(startup())
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5001, debug=True)
