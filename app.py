@@ -55,13 +55,13 @@ async def json_to_proto(json_data: str, proto_message: Message) -> bytes:
 def get_account_credentials(region: str) -> str:
     r = region.upper()
     if r == "IND":
-        return "uid=4646954697&password=FLASH_TR_DCMTT"
+        return "uid=4612964480&password=FLASH_TR_3HP6EGVUJ"
     elif r == "BD":
-        return "uid=4646958871&password=FLASH_TR_1PQGH"  
+        return "uid=4612988977&password=FLASH_TR_TCQZ6EVSZ"  # BD credentials
     elif r in {"BR", "US", "SAC", "NA"}:
-        return "uid=4646957621&password=FLASH_TR_HI69K"
+        return "uid=4612968156&password=FLASH_TR_MZRVWF07I"
     else:
-        return "uid=4646952598&password=FLASH_TR_17SVQ"
+        return "uid=3158350464&password=70EA041FCF79190E3D0A8F3CA95CAAE1F39782696CE9D85C2CCD525E28D223FC"
 
 # === Token Generation ===
 
