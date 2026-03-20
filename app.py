@@ -57,7 +57,7 @@ def get_account_credentials(region: str) -> str:
     if r == "IND":
         return "uid=4368519226&password=B27C15186C4624E1282570A3B6E0F8A8E595321D5264819B6B66C9EFAF1FB065"
     elif r == "BD":
-        return "uid=4652212850&password=FLASH_UYJJCXEYY_JULI"  # BD credentials
+        return "uid=4349197522&password=3C1DC2906C87DCF3F4F787200A8F056A6F21747644ADC08C36D07E68E4A60B8D"  # BD credentials
     elif r in {"BR", "US", "SAC", "NA"}:
         return "uid=4612968156&password=FLASH_TR_MZRVWF07I"
     else:
